@@ -16,7 +16,7 @@
 
 
 
-### 题目一
+### 题目一：用pthread解决欧拉-黎曼函数
 
 #### pthread
 
@@ -42,7 +42,7 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
-### 题目二
+### 题目二：用OpenMP解决N体问题
 
 #### OpenMP
 
@@ -82,7 +82,7 @@ gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
 
 
 
-### 题目三 
+### 题目三：用OpenMP解决Kmeans问题
 
 #### OpenMP
 
