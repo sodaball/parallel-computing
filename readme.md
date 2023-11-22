@@ -125,6 +125,7 @@ gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
 
 
 ### 题目三：用OpenMP解决Kmeans问题
+使用的数据集为[iris](https://archive.ics.uci.edu/dataset/53/iris)
 
 #### OpenMP
 
