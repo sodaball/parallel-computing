@@ -1,6 +1,6 @@
 ### 软硬件环境：
 
-![image-20231114111421488](C:\Users\Dachau\AppData\Roaming\Typora\typora-user-images\image-20231114111421488.png)
+![hardware](./img\hardware.png)
 
 内核：Linux
 
@@ -32,15 +32,13 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 ./riemann_zeta_pthread num_threads num_s num_k
 ```
 
-结果：
 
-![image-20231114141524614](C:\Users\Dachau\AppData\Roaming\Typora\typora-user-images\image-20231114141524614.png)
 
 上图是x和k不变的情况下，只改变线程数量
 
 
 
-问题：
+问题1：
 
 结果不对
 
@@ -50,11 +48,21 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
-问题：
+问题2：
 
 运行结果太慢，for循环中的pow计算可以外提，避免重复计算
 
 
+
+结果：
+
+1. s、k不变，线程数改变，比较运行时间
+
+![reta1](./img\reta1.png)
+
+2. s、线程数不变，k改变，比较运行时间
+
+![reta2](./img\reta2.png)
 
 
 
@@ -94,7 +102,7 @@ gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
 
 结果：（**输出时间步为1000，可以调整**）
 
-![image-20231103173551059](C:\Users\Dachau\AppData\Roaming\Typora\typora-user-images\image-20231103173551059.png)
+![nbody](./img\nbody.png)
 
 
 
@@ -133,4 +141,8 @@ kmeans.c:(.text+0x80): undefined reference to sqrt
 
 多线程比单线程还慢，可能是线程管理开销比较大，但是尝试增加NUM_POINTS或MAX_ITERATIONS的值
 
-![image-20231114112203951](C:\Users\Dachau\AppData\Roaming\Typora\typora-user-images\image-20231114112203951.png)
+
+
+结果：
+
+![kmeans](./img\kmeans.png)
