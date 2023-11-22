@@ -52,7 +52,7 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 问题：
 
-运行结果太慢，(-1)^(i+j)的`pow`函数可以改为条件判断
+运行结果太慢，for循环中的pow计算可以外提，避免重复计算
 
 
 
