@@ -16,9 +16,11 @@ struct ThreadArgs {
 void *euler_raman_zeta_thread(void *arg) {
     struct ThreadArgs *thread_args = (struct ThreadArgs *)arg;
     double sum = 0.0;
+    double pow_2_s = pow(2, thread_args->s); // 将pow(2, thread_args->s)提取出来，避免重复计算
     for (int i = thread_args->k_start; i <= thread_args->k_end; i++) {
         for (int j = 1; j <= thread_args->k_end; j++) {
-            sum += pow(2, thread_args->s) * pow(-1, i + j) / pow(i + j, thread_args->s);
+            // sum += pow(2, thread_args->s) * pow(-1, i + j) / pow(i + j, thread_args->s);
+            sum += pow_2_s * pow(-1, i + j) / pow(i + j, thread_args->s);
         }
     }
     thread_args->partial_sum = sum;

@@ -50,6 +50,12 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
+问题：
+
+运行结果太慢，(-1)^(i+j)的`pow`函数可以改为条件判断
+
+
+
 
 
 ### 题目二：用OpenMP解决N体问题
