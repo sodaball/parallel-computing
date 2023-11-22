@@ -18,7 +18,7 @@ void *euler_raman_zeta_thread(void *arg) {
     double sum = 0.0;
     for (int i = thread_args->k_start; i <= thread_args->k_end; i++) {
         for (int j = 1; j <= thread_args->k_end; j++) {
-            sum += pow(2, thread_args->s) * pow(-1, i + 1) / pow(i + j, thread_args->s);
+            sum += pow(2, thread_args->s) * pow(-1, i + j) / pow(i + j, thread_args->s);
         }
     }
     thread_args->partial_sum = sum;

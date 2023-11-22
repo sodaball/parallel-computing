@@ -40,6 +40,16 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
+问题：
+
+结果不对
+
+原因：
+
+实验指导文档中公式有误，指数`i+1`应该改为`i+j`
+
+
+
 
 
 ### 题目二：用OpenMP解决N体问题
