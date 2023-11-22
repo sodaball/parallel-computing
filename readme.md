@@ -1,6 +1,6 @@
 ### 软硬件环境：
 
-![hardware](img\hardware.png)
+![hardware](img/hardware.png)
 
 内核：Linux
 
@@ -58,11 +58,11 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 1. s、k不变，线程数改变，比较运行时间
 
-![reta1](img\reta1.png)
+![reta1](img/reta1.png)
 
 2. s、线程数不变，k改变，比较运行时间
 
-![reta2](img\reta2.png)
+![reta2](img/reta2.png)
 
 
 
@@ -102,7 +102,7 @@ gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
 
 结果：（**输出时间步为1000，可以调整**）
 
-![nbody](img\nbody.png)
+![nbody](img/nbody.png)
 
 
 
@@ -145,4 +145,4 @@ kmeans.c:(.text+0x80): undefined reference to sqrt
 
 结果：
 
-![kmeans](img\kmeans.png)
+![kmeans](img/kmeans.png)
