@@ -4,7 +4,7 @@
 #include <omp.h>
 
 #define G 6.67430e-11  // 万有引力常数
-#define tmax 100       // 最大时间步数
+#define tmax 1000       // 最大时间步数
 #define dt 1.0         // 时间步长
 #define convergence_threshold 1e-6  // 收敛阈值
 
@@ -16,7 +16,7 @@ typedef struct {
 
 void initialize_bodies(Body* bodies, int num_bodies) {
     // 设置相同的随机种子
-    srand(1234);  // 1234 是示例种子，你可以选择任何非负整数
+    srand(1234);  // 可以选择任何非负整数
 
     #pragma omp parallel for
     for (int i = 0; i < num_bodies; i++) {
@@ -69,7 +69,10 @@ double compute_total_velocity(Body* my_bodies, int my_start, int my_end) {
     return total_velocity;
 }
 
-int main() {
+int main(int argc, char** argv) {
+    // 设置线程数
+    omp_set_num_threads(atoi(argv[1]));
+
     int n = 1000; // N体问题中的物体数量
 
     // 创建全局物体数组
@@ -182,6 +185,11 @@ int main() {
     // 释放内存
     free(all_bodies);
     free(my_bodies);
+
+    // 输出进程数、物体个数和迭代次数
+    printf("Number of processes: %d\n", omp_get_max_threads());
+    printf("Number of bodies: %d\n", n);
+    printf("Number of iterations: %d\n", tmax);
 
     return 0;
 }

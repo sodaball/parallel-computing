@@ -66,7 +66,25 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
-### 题目二：用OpenMP解决N体问题
+### 题目二：用MPI和OpenMP解决N体问题
+
+### MPI
+
+编译：
+
+```
+mpicc -o nbody_mpi nbody_mpi.c -lm
+```
+
+运行：
+
+```
+./nbody
+```
+
+
+
+
 
 #### OpenMP
 
