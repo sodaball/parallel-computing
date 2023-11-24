@@ -79,7 +79,7 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 运行：
 
 ```
-./nbody
+./nbody_mpi
 ```
 
 
