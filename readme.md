@@ -84,23 +84,23 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 
 结果：
 
-![nbody](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\nbody.png)
+![nbody](img/nbody.png)
 
 * 进程数为1
 
-![nbody_mpi1](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\nbody_mpi1.png)
+![nbody_mpi1](img/nbody_mpi1.png)
 
 * 进程数为2
 
-![nbody_mpi2](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\nbody_mpi2.png)
+![nbody_mpi2](img/nbody_mpi2.png)
 
 * 进程数为4
 
-![nbody_mpi4](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\nbody_mpi4.png)
+![nbody_mpi4](img/nbody_mpi4.png)
 
 * 进程数为8
 
-![nbody_mpi8](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\nbody_mpi8.png)
+![nbody_mpi8](img/nbody_mpi8.png)
 
 
 
