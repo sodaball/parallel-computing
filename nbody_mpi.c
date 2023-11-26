@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define n 100   // 质点数
+#define n 10   // 质点数
 #define tmax 1000    // 时间步数
 #define dt 0.01 // 时间步长
 #define M 1e24
