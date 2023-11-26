@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define n 1000
-#define tmax 100
-#define dt 0.01
+#define n 10   // 质点数
+#define tmax 1000    // 时间步数
+#define dt 0.01 // 时间步长
 #define M 1e24
 #define G 6.67430e-11  // 重力常数
 
@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
         MPI_Allgather(vnew + rank * local_n, local_n, MPI_DOUBLE, v, local_n, MPI_DOUBLE, MPI_COMM_WORLD);
 
         // 输出信息，每100步输出一次
-        if (t % 100 == 0) {
+        if (t % 800 == 0) {
             for (int i = 0; i < n; i++) {
                 printf("Process %d, Particle %d: Position (%f, %f, %f), Velocity (%f, %f, %f)\n",
                    rank, i, x[i].x, x[i].y, x[i].z, v[i].x, v[i].y, v[i].z);

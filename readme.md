@@ -66,9 +66,7 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 
 
-### 题目二：用MPI和OpenMP解决N体问题
-
-### MPI
+### 题目二：用MPI解决N体问题
 
 编译：
 
@@ -86,6 +84,8 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 
 ![nbody](img/nbody.png)
 
+#### 质点数和时间步数不变，改变进程数：
+
 * 进程数为1
 
 ![nbody_mpi1](img/nbody_mpi1.png)
@@ -102,23 +102,33 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 
 ![nbody_mpi8](img/nbody_mpi8.png)
 
+#### 进程数和时间步数不变，改变质点数：
 
+* 质点数为10
 
-#### OpenMP
+![nbody_mpi8](img/nbody_mpi4_10_100.png)
 
-编译：
+* 质点数为100
 
-```
-gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
-```
+![nbody_mpi8](img/nbody_mpi4_100_100.png)
 
+* 质点数为1000
 
+![nbody_mpi8](img/nbody_mpi4_1000_100.png)
 
-运行：
+#### 质点数和进程数不变，改变时间步数：
 
-```
-./nbody_openmp
-```
+* 时间步数为10
+
+![nbody_mpi8](img/nbody_mpi4_100_10.png)
+
+* 时间步数为100
+
+![nbody_mpi8](img/nbody_mpi4_100_100.png)
+
+* 时间步数为1000
+
+![nbody_mpi8](img/nbody_mpi4_100_1000.png)
 
 
 
@@ -136,7 +146,7 @@ gcc -fopenmp -o ./nbody_openmp ./nbody_openmp.c  -lm
 
 
 
-结果：（**输出时间步为1000，可以调整**）
+结果：（**每800时间步输出一次，可以调整**）
 
 ![nbody](img/nbody.png)
 
