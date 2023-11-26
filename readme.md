@@ -105,7 +105,7 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 **运行**：
 
 ```
-./nbody_mpi
+mpirun -n <num_process> ./nbody_mpi
 ```
 
 **结果**：
@@ -183,12 +183,6 @@ mpicc -o nbody_mpi nbody_mpi.c -lm
 解决方法：
 
 串行和并行执行两次的初始值不一样，应该设置为一样的
-
-
-
-**结果**：（每800时间步输出一次，可以调整）
-
-![nbody](img/nbody.png)
 
 
 
