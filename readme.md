@@ -86,11 +86,11 @@ gcc -fopenmp -o riemann_zeta_openmp riemann_zeta_openmp.c -lm
 
 1. **s、k不变，线程数改变，比较运行时间**
 
-![reta3](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\reta3.png)
+![reta3](img/reta3.png)
 
 2. **s、线程数不变，k改变，比较运行时间**
 
-![reta4](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\reta4.png)
+![reta4](img/reta4.png)
 
 
 
