@@ -64,6 +64,30 @@ gcc -o riemann_zeta_pthread riemann_zeta_pthread.c -lpthread -lm
 
 ![reta2](img/reta2.png)
 
+#### OpenMP
+
+编译：
+
+```bash
+gcc -fopenmp -o riemann_zeta_openmp riemann_zeta_openmp.c -lm
+```
+
+运行：
+
+```bash
+./riemann_zeta_openmp <MAX_THREADS> <s> <k>
+```
+
+结果：
+
+1. s、k不变，线程数改变，比较运行时间
+
+![reta3](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\reta3.png)
+
+2. s、线程数不变，k改变，比较运行时间
+
+![reta4](Q:\Dauhau_data_学习资料\大四上\并行计算\实验\img\reta4.png)
+
 
 
 ### 题目二：用MPI解决N体问题
